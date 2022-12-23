@@ -560,8 +560,10 @@ representing the function and the `set` field contains the MOI set.
 See also the [documentation](@ref Constraints) on JuMP's representation of
 constraints for more background.
 """
-struct ScalarConstraint{F<:AbstractJuMPScalar,S<:MOI.AbstractScalarSet} <:
-       AbstractConstraint
+struct ScalarConstraint{
+    F<:Union{Number,AbstractJuMPScalar},
+    S<:MOI.AbstractScalarSet,
+} <: AbstractConstraint
     func::F
     set::S
 end
@@ -595,7 +597,7 @@ See also the [documentation](@ref Constraints) on JuMP's representation of
 constraints.
 """
 struct VectorConstraint{
-    F<:AbstractJuMPScalar,
+    F<:Union{Number,AbstractJuMPScalar},
     S<:MOI.AbstractVectorSet,
     Shape<:AbstractShape,
 } <: AbstractConstraint
@@ -604,7 +606,7 @@ struct VectorConstraint{
     shape::Shape
 end
 function VectorConstraint(
-    func::Vector{<:AbstractJuMPScalar},
+    func::Vector{<:Union{Number,AbstractJuMPScalar}},
     set::MOI.AbstractVectorSet,
 )
     if length(func) != MOI.dimension(set)
@@ -619,7 +621,7 @@ function VectorConstraint(
 end
 
 function VectorConstraint(
-    func::AbstractVector{<:AbstractJuMPScalar},
+    func::AbstractVector{<:Union{Number,AbstractJuMPScalar}},
     set::MOI.AbstractVectorSet,
 )
     # collect() is not used here so that DenseAxisArray will work
@@ -674,6 +676,7 @@ function add_constraint(
     con::AbstractConstraint,
     name::String = "",
 )
+    con = model_convert(model, con)
     # The type of backend(model) is unknown so we directly redirect to another
     # function.
     check_belongs_to_model(con, model)
