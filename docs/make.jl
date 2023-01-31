@@ -1,5 +1,6 @@
 import Pkg
 Pkg.pkg"add Documenter#633a95a"
+Pkg.pkg"add MathOptInterface#od/nlp-expr"
 import Documenter
 import Downloads
 import Literate
