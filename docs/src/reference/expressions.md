@@ -20,12 +20,17 @@ linear_terms
 
 ## Quadratic expressions
 
-
 ```@docs
 GenericQuadExpr
 QuadExpr
 UnorderedPair
 quad_terms
+```
+
+## Nonlinear expressions
+
+```@docs
+NonlinearExpr
 ```
 
 ## Utilities and modifications
