@@ -247,6 +247,7 @@ const _PAGES = [
         "manual/nlp.md",
         "manual/callbacks.md",
         "manual/complex.md",
+        "manual/nlp_legacy.md",
     ],
     "API Reference" => [
         "reference/models.md",
