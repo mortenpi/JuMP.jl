@@ -54,7 +54,6 @@ set_value(::JuMP.NonlinearParameter, ::Number)
 register
 @register
 UserDefinedFunction
-@NL
 ```
 
 ## Derivatives
