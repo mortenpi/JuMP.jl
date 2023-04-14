@@ -15,6 +15,7 @@ SnoopPrecompile = "66db9d55-30c0-4569-8b51-7e840670fc0c"
 SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
 [compat]
+MacroTools = "0.5"
 MathOptInterface = "1.14"
 MutableArithmetics = "1.1"
 OrderedCollections = "1"
