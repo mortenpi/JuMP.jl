@@ -3,56 +3,11 @@
 More information can be found in the [Nonlinear Modeling](@ref) section of the
 manual.
 
-## [Models](@id ref_nl_models)
-
-
-```@docs
-nonlinear_model
-```
-
-## [Constraints](@id ref_nl_constraints)
-
-```@docs
-@NLconstraint
-@NLconstraints
-num_nonlinear_constraints
-add_nonlinear_constraint
-all_nonlinear_constraints
-nonlinear_dual_start_value
-set_nonlinear_dual_start_value
-```
-
-## [Expressions](@id ref_nl_expressions)
-
-```@docs
-@NLexpression
-@NLexpressions
-NonlinearExpression
-add_nonlinear_expression
-```
-
-## [Objectives](@id ref_nl_objectives)
-
-```@docs
-@NLobjective
-set_nonlinear_objective
-```
-
-## [Parameters](@id ref_nl_parameters)
-
-```@docs
-@NLparameter
-@NLparameters
-NonlinearParameter
-value(::JuMP.NonlinearParameter)
-set_value(::JuMP.NonlinearParameter, ::Number)
-```
-
 ## User-defined functions
 
 ```@docs
-register
 @register
+add_user_defined_function
 UserDefinedFunction
 ```
 
@@ -60,4 +15,29 @@ UserDefinedFunction
 
 ```@docs
 NLPEvaluator
+```
+
+## Legacy interface
+
+```@docs
+@NLconstraint
+@NLconstraints
+@NLexpression
+@NLexpressions
+@NLobjective
+@NLparameter
+@NLparameters
+NonlinearExpression
+NonlinearParameter
+nonlinear_model
+add_nonlinear_expression
+add_nonlinear_constraint
+set_nonlinear_objective
+num_nonlinear_constraints
+all_nonlinear_constraints
+nonlinear_dual_start_value
+set_nonlinear_dual_start_value
+value(::JuMP.NonlinearParameter)
+set_value(::JuMP.NonlinearParameter, ::Number)
+register
 ```
