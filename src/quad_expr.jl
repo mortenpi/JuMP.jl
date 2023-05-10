@@ -51,6 +51,8 @@ mutable struct GenericQuadExpr{CoefType,VarType} <: AbstractJuMPScalar
     terms::OrderedDict{UnorderedPair{VarType},CoefType}
 end
 
+variable_ref_type(::GenericQuadExpr{C,V}) where {C,V} = V
+
 """
     GenericQuadExpr(
         aff::GenericAffExpr{V,K},
