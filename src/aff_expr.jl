@@ -122,6 +122,13 @@ mutable struct GenericAffExpr{CoefType,VarType} <: AbstractJuMPScalar
     terms::OrderedDict{VarType,CoefType}
 end
 
+function owner_model(x::GenericAffExpr)
+    if !isempty(x.terms)
+        return owner_model(first(keys(x.terms)))
+    end
+    return nothing
+end
+
 """
     variable_ref_type(::GenericAffExpr{C, V}) where {C, V}
 
