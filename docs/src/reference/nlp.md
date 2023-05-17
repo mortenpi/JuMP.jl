@@ -3,7 +3,7 @@
 More information can be found in the [Nonlinear Modeling](@ref) section of the
 manual.
 
-## User-defined functions
+## [User-defined functions](@id udf_reference)
 
 ```@docs
 @register
