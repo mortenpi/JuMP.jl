@@ -31,7 +31,7 @@ model = GenericModel{BigFloat}(Clarabel.Optimizer{BigFloat})
 @variable(model, -1 <= x[1:2] <= sqrt(big"2"))
 
 # Note that each `x` is now a [`GenericVariableRef{BigFloat}`](@ref), which
-# means that the value of `x` in a solutionn will be a `BigFloat`.
+# means that the value of `x` in a solution will be a `BigFloat`.
 
 # The lower and upper bounds of the decision variables are also `BigFloat`:
 
