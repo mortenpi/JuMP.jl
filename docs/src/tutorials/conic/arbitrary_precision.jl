@@ -94,17 +94,17 @@ objective_value(model)
 
 dual(c)
 
-# This problem has an analytic solution of `x = [3//7, 3 // 14]`. Currently, our
+# This problem has an analytic solution of `x = [3//7, 3//14]`. Currently, our
 # solution has an error of approximately `1e-9`:
 
-value.(x) .- [3//7, 3//14]
+value.(x) .- [3 // 7, 3 // 14]
 
 # But by reducing the tolerances, we can obtain a more accurate solution:
 
 set_attribute(model, "tol_gap_abs", 1e-32)
 set_attribute(model, "tol_gap_rel", 1e-32)
 optimize!(model)
-value.(x) .- [3//7, 3//14]
+value.(x) .- [3 // 7, 3 // 14]
 
 # ## Rational arithmetic
 
