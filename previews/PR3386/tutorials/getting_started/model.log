@@ -21,7 +21,7 @@
     c2 : 1.50000e+00
 
 * Work counters
-  Solve time (sec)   : 3.47376e-04
+  Solve time (sec)   : 3.18766e-04
   Simplex iterations : 2
   Barrier iterations : 0
   Node count         : -1
