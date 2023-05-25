@@ -13,6 +13,7 @@ the manual.
 ## Basic utilities
 
 ```@docs
+VariableRef
 GenericVariableRef
 num_variables
 all_variables
