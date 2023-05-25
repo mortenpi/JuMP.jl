@@ -24,7 +24,7 @@ julia&gt; @variable(model, Q[1:2, 1:2], Symmetric)
 
 julia&gt; @constraint(model, Q in PSDCone())
 [Q[1,1]  Q[1,2];
- Q[1,2]  Q[2,2]] ∈ PSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/330d8a3b5e3fbcbe3fd48da92de0b2639c9db6b4/src/sd.jl#L434-L472">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
+ Q[1,2]  Q[2,2]] ∈ PSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/sd.jl#L434-L472">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
     _error::Function,
     Q::AbstractMatrix{&lt;:AbstractJuMPScalar},
     ::PSDCone,
@@ -34,7 +34,7 @@ julia&gt; @variable(model, Q[1:2, 1:2]);
 
 julia&gt; @constraint(model, Q in PSDCone())
 [Q[1,1]  Q[1,2];
- Q[2,1]  Q[2,2]] ∈ PSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/330d8a3b5e3fbcbe3fd48da92de0b2639c9db6b4/src/sd.jl#L487-L507">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
+ Q[2,1]  Q[2,2]] ∈ PSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/sd.jl#L487-L507">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
     _error::Function,
     Q::LinearAlgebra.Hermitian{V,M},
     ::HermitianPSDCone,
@@ -46,14 +46,14 @@ julia&gt; @variable(model, Q[1:2, 1:2]);
 
 julia&gt; @constraint(model, LinearAlgebra.Hermitian(Q) in HermitianPSDCone())
 [Q[1,1]  Q[1,2];
- Q[1,2]  Q[2,2]] ∈ HermitianPSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/330d8a3b5e3fbcbe3fd48da92de0b2639c9db6b4/src/sd.jl#L652-L674">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
+ Q[1,2]  Q[2,2]] ∈ HermitianPSDCone()</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/sd.jl#L652-L674">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
     _error::Function,
     f::AbstractVector{&lt;:AbstractJuMPScalar},
     ::Nonnegatives,
     extra::Union{MOI.AbstractVectorSet,AbstractVectorSet},
-)</code></pre><p>A helper method that re-writes</p><pre><code class="language-julia hljs">@constraint(model, X &gt;= Y, extra)</code></pre><p>into</p><pre><code class="language-julia hljs">@constraint(model, X - Y in extra)</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/330d8a3b5e3fbcbe3fd48da92de0b2639c9db6b4/src/sets.jl#L44-L60">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
+)</code></pre><p>A helper method that re-writes</p><pre><code class="language-julia hljs">@constraint(model, X &gt;= Y, extra)</code></pre><p>into</p><pre><code class="language-julia hljs">@constraint(model, X - Y in extra)</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/sets.jl#L44-L60">source</a></section><section><div><pre><code class="language-julia hljs">build_constraint(
     _error::Function,
     f::AbstractVector{&lt;:AbstractJuMPScalar},
     ::Nonpositives,
     extra::Union{MOI.AbstractVectorSet,AbstractVectorSet},
-)</code></pre><p>A helper method that re-writes</p><pre><code class="language-julia hljs">@constraint(model, Y &lt;= X, extra)</code></pre><p>into</p><pre><code class="language-julia hljs">@constraint(model, X - Y in extra)</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/330d8a3b5e3fbcbe3fd48da92de0b2639c9db6b4/src/sets.jl#L70-L86">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../bridge_constraints/">« <code>bridge_constraints</code></a><a class="docs-footer-nextpage" href="../build_variable/"><code>build_variable</code> »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.28.0-DEV on <span class="colophon-date" title="Thursday 25 May 2023 20:12">Thursday 25 May 2023</span>. Using Julia version 1.6.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+)</code></pre><p>A helper method that re-writes</p><pre><code class="language-julia hljs">@constraint(model, Y &lt;= X, extra)</code></pre><p>into</p><pre><code class="language-julia hljs">@constraint(model, X - Y in extra)</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/sets.jl#L70-L86">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../bridge_constraints/">« <code>bridge_constraints</code></a><a class="docs-footer-nextpage" href="../build_variable/"><code>build_variable</code> »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.28.0-DEV on <span class="colophon-date" title="Thursday 25 May 2023 20:25">Thursday 25 May 2023</span>. Using Julia version 1.6.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
