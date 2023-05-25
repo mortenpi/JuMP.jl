@@ -31,7 +31,7 @@ g (generic function with 1 method)
 
 julia&gt; register(model, :g, 2, g; autodiff = true)
 
-julia&gt; @NLobjective(model, Min, g(x[1], x[2]))</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/nlp.jl#L650-L704">source</a></section><section><div><pre><code class="language-julia hljs">register(
+julia&gt; @NLobjective(model, Min, g(x[1], x[2]))</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/cd522f9172b52a27bb800b8c00ec705c97f695ce/src/nlp.jl#L650-L704">source</a></section><section><div><pre><code class="language-julia hljs">register(
     model::Model,
     s::Symbol,
     dimension::Integer,
@@ -70,7 +70,7 @@ julia&gt; function ∇g(g::AbstractVector{T}, x::T, y::T) where {T&lt;:Real}
 
 julia&gt; register(model, :g, 2, g, ∇g)
 
-julia&gt; @NLobjective(model, Min, g(x[1], x[2]))</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/nlp.jl#L720-L790">source</a></section><section><div><pre><code class="language-julia hljs">register(
+julia&gt; @NLobjective(model, Min, g(x[1], x[2]))</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/cd522f9172b52a27bb800b8c00ec705c97f695ce/src/nlp.jl#L720-L790">source</a></section><section><div><pre><code class="language-julia hljs">register(
     model::Model,
     s::Symbol,
     dimension::Integer,
@@ -94,4 +94,4 @@ julia&gt; ∇²f(x::Float64) = 2.0
 julia&gt; register(model, :foo, 1, f, ∇f, ∇²f)
 
 julia&gt; @NLobjective(model, Min, foo(x))
-</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/c65180ad8c934e97cf09f2694862aad39d0ca956/src/nlp.jl#L816-L863">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../reduced_cost/">« <code>reduced_cost</code></a><a class="docs-footer-nextpage" href="../relative_gap/"><code>relative_gap</code> »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.28.0-DEV on <span class="colophon-date" title="Thursday 25 May 2023 20:25">Thursday 25 May 2023</span>. Using Julia version 1.6.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+</code></pre></div><a class="docs-sourcelink" target="_blank" href="https://github.com/jump-dev/JuMP.jl/blob/cd522f9172b52a27bb800b8c00ec705c97f695ce/src/nlp.jl#L816-L863">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../reduced_cost/">« <code>reduced_cost</code></a><a class="docs-footer-nextpage" href="../relative_gap/"><code>relative_gap</code> »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.28.0-DEV on <span class="colophon-date" title="Thursday 25 May 2023 22:40">Thursday 25 May 2023</span>. Using Julia version 1.6.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
